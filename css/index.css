@@ -1,0 +1,22 @@
+a {
+    color: black;
+}
+
+p {
+    color: rgb(55, 110, 18);
+    background: ghostwhite;
+}
+
+.img-nice {
+    flex: 100;
+}
+
+::after {
+    background-color: salmon;
+    color: blue;
+}
+
+/*#login_form {
+    display: flex;
+    visibility: hidden;
+}*/
